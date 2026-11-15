@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <style>@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf9f5">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Меню ресторану Lounge. Страви, бар, сніданки та банкетне меню.">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <title>Меню — Lounge</title>
+    <script type="module" crossorigin src="./assets/menu-B3QsePil.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/motion-E6wEwcKo.js">
+    <link rel="stylesheet" crossorigin href="./assets/motion-CoIzsOgI.css">
+    <link rel="stylesheet" crossorigin href="./assets/menu-DQDZOnap.css">
+  </head>
+  <body class="menu-page">
+    <a class="menu-skip" href="#catalog">Перейти до страв</a>
+    <header class="menu-header">
+      <div class="menu-wrap">
+        <div class="menu-header__brand">
+          <a class="menu-brand" href="./" aria-label="Lounge — головна">
+            <img src="./favicon.svg" width="52" height="52" alt="">
+            <span><strong>Lounge</strong><small>Ресторан</small></span>
+          </a>
+          <button type="button" class="menu-button mobile-sections" aria-controls="categories" aria-expanded="false">☰ <span>Категорії</span></button>
+        </div>
+        <nav class="menu-topnav" aria-label="Основна навігація">
+          <a href="./">Головна</a>
+          <a href="#menyu" aria-current="page">Меню</a>
+          <a href="./#visit">Контакти</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-wrap menu-layout">
+      <aside class="menu-sidebar" id="categories" aria-label="Категорії меню">
+        <div class="menu-sidebar__panel">
+          <a class="menu-favorites" href="#popular" data-popular><span aria-hidden="true">★</span> Популярне</a>
+          <a class="menu-favorites" href="#obrane" data-favorites><span aria-hidden="true">♡</span> Обране <span class="favorites-count" aria-label="Кількість збережених позицій"></span></a>
+          <p class="menu-muted menu-sidebar__label">Меню</p>
+          <nav aria-label="Розділи та категорії" data-categories></nav>
+        </div>
+      </aside>
+      <aside class="menu-info" aria-label="Пошук та контакти">
+        <div class="menu-info__panel">
+          <label class="menu-search">
+            <span class="sr-only">Знайти страву або напій</span>
+            <input id="menu-search" type="search" placeholder="Пошук" autocomplete="off">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+          </label>
+          <section class="menu-location" aria-labelledby="menu-info-title">
+            <h2 class="menu-muted" id="menu-info-title">Інформація про заклад</h2>
+            <dl>
+              <div>
+                <span aria-hidden="true">◷</span><div><dt>Робочий час</dt><dd>Щодня 09:00–22:00</dd></div>
+              </div>
+              <div>
+                <span aria-hidden="true">⌖</span><div><dt>Демонстраційна адреса</dt><dd>вул. Ліхтарна, 17<br>Липовий Берег, Україна</dd></div>
+              </div>
+            </dl>
+            <a class="menu-button menu-contact" href="./#visit">Деталі візиту <span aria-hidden="true">↗</span></a>
+          </section>
+        </div>
+      </aside>
+      <main class="menu-catalog" id="catalog" tabindex="-1">
+        <p role="status" class="sr-only" data-menu-status></p>
+        <div data-results><h1>Меню</h1><p>Завантажуємо меню…</p><noscript><p>Увімкніть JavaScript, щоб переглянути каталог.</p></noscript></div>
+      </main>
+    </div>
+    <dialog class="dish-dialog" aria-labelledby="dish-dialog-title">
+      <div class="dish-dialog__body">
+        <form method="dialog"><button class="menu-button dish-dialog__close" aria-label="Закрити картку">×</button></form>
+        <div data-item-detail></div>
+      </div>
+    </dialog>
+  </body>
+</html>
