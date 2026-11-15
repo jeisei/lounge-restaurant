@@ -1,0 +1,21 @@
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-fast: .26s;
+  --motion-panel: .38s;
+}
+
+::view-transition-old(root) {
+  animation: .38s cubic-bezier(.4, 0, .3, 1) both page-out;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: .52s var(--motion-ease) both page-in;
+  mix-blend-mode: normal;
+}
+
+@keyframes page-out { to { opacity: 0; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(7px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root), ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
